@@ -38,7 +38,7 @@ def DFA1():
     final_state = {3}
     word_to_check = input("Write the word you want to verify for Automata 1: \n")
     dfa = DFA.DFA(states, alphabet, transitions, start_state, final_state)
-    if dfa.is_accepted(word_to_check):
+    if dfa.is_correct(word_to_check):
         print(word_to_check + " is correct.")
     else:
         print(word_to_check + " is not correct.")
@@ -67,7 +67,7 @@ def DFA2():
     final_state = {3, 4, 6, 8}
     word_to_check = input("Write the word you want to verify for Automata 2: \n")
     dfa = DFA.DFA(states, alphabet, transitions, start_state, final_state)
-    if dfa.is_accepted(word_to_check):
+    if dfa.is_correct(word_to_check):
         print(word_to_check + " is correct.")
     else:
         print(word_to_check + " is not correct.")
@@ -95,7 +95,7 @@ def DFA3():
     final_state = {7, 8}
     word_to_check = input("Write the word you want to verify for Automata 3: \n")
     dfa = DFA.DFA(states, alphabet, transitions, start_state, final_state)
-    if dfa.is_accepted(word_to_check):
+    if dfa.is_correct(word_to_check):
         print(word_to_check + " is correct.")
     else:
         print(word_to_check + " is not correct.")
@@ -121,7 +121,7 @@ def DFA4():
     final_state = {10}
     word_to_check = input("Write the word you want to verify for Automata 4: \n")
     dfa = DFA.DFA(states, alphabet, transitions, start_state, final_state)
-    if dfa.is_accepted(word_to_check):
+    if dfa.is_correct(word_to_check):
         print(word_to_check + " is correct.")
     else:
         print(word_to_check + " is not correct.")
