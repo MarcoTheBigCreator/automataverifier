@@ -94,14 +94,16 @@ def DFA2():
 
 
 def DFA3():
-    states = {1}
-    alphabet = {'a', 'b'}
+    states = {1, 2, 3}
+    alphabet = {'a', 'b', ' '}
     transitions = {
-        (1, 'a'): 1, (1, 'b'): 1
+        (1, 'a'): 2, (1, ' '): 3,
+        (2, 'a'): 2, (2, 'b'): 3,
+        (3, ' '): 1
     }
     start_state = 1
-    final_state = {1}
-    word_to_check = input("Write the word you want to verify for Automata 3: \n word: ")
+    final_state = {3}
+    word_to_check = input("Write the word you want to verify for Automata 3 (use space for empty string): \n word: ")
     dfa = DFA.DFA(states, alphabet, transitions, start_state, final_state)
     if dfa.is_correct(word_to_check):
         print(word_to_check + " is correct.")
@@ -123,7 +125,7 @@ def DFA4():
     states = {1, 2, 3, 4, 5, 6}
     alphabet = {'a', 'b', ' '}
     transitions = {
-        (1, 'a'): 2,
+        (1, 'a'): 2, (1, ' '): 3,
         (2, 'a'): 2, (2, 'b'): 3,
         (3, 'a'): 4, (3, ' '): 1,
         (4, 'b'): 5,
@@ -150,14 +152,16 @@ def DFA4():
 
 
 def DFA5():
-    states = {1, 2}
-    alphabet = {'1'}
+    states = {1, 2, 3}
+    alphabet = {'1', ' '}
     transitions = {
-        (1, '1'): 2, (2, '1'): 1
+        (1, '1'): 2, (1, ' '): 3,
+        (2, '1'): 3,
+        (3, ' '): 1
     }
     start_state = 1
-    final_state = {1, 2}
-    word_to_check = input("Write the word you want to verify for Automata 5: \n word: ")
+    final_state = {3}
+    word_to_check = input("Write the word you want to verify for Automata 5 (use space for empty string): \n word: ")
     dfa = DFA.DFA(states, alphabet, transitions, start_state, final_state)
     if dfa.is_correct(word_to_check):
         print(word_to_check + " is correct.")
